@@ -61,10 +61,18 @@ main {
 .professional-history {
   max-width: 1200px;
   margin: 0 auto;
+  /* overflow: hidden; */
 }
 
-.history-box-01 {}
+.history-box-01 h3 {
+  margin: 0px 25px;
+}
 
 .history-note {
   display: flex;
+  margin: 0px 25px;
+}
+
+.history-competences {
+  margin: 0px 45px;
 }
