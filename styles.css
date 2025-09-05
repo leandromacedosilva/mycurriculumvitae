@@ -76,3 +76,14 @@ main {
 .history-competences {
   margin: 0px 45px;
 }
+
+.cademic-formation {}
+
+.cademic-box-01 {
+  margin: 0px 45px;
+}
+
+.cademic-note {
+  display: flex;
+  /* margin: 0px 25px; */
+}
