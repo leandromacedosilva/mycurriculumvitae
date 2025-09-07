@@ -35,6 +35,10 @@ header {
   text-transform: uppercase;
 }
 
+h2, h3 {
+  text-transform: uppercase;
+}
+
 .contacts {
   display: flex;
   justify-content: left;
@@ -64,7 +68,8 @@ main {
   height: 2.5px;
 }
 
-.professional-history {
+.professional-history h2 {
+  padding-top: 3px;
   /* max-width: 1200px; */
   /* margin: 0 auto; */
   /* overflow: hidden; */
@@ -77,13 +82,15 @@ main {
 .history-note {
   display: flex;
   margin: 0px 25px;
+  opacity: .5;
 }
 
 .history-competences {
   margin: 0px 45px;
 }
 
-.cademic-formation {
+.cademic-formation h2 {
+  padding-top: 3px;
   /* max-width: 1200px;
   margin: 0 auto; */
 }
@@ -94,5 +101,6 @@ main {
 
 .cademic-note {
   display: flex;
+  opacity: .5;
   /* margin: 0px 25px; */
 }
