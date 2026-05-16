@@ -4,19 +4,19 @@
   /* Paleta Executiva Moderna Tech */
   --bg-page: #f4f6f8;
   --bg-card: #ffffff;
-  --primary-color: #1e293b;   /* Slate Dark para Textos e Cabeçalhos principais */
-  --accent-color: #2563eb;    /* Deep Blue Tech para cargos e destaques */
-  --text-main: #334155;       /* Charcoal para leitura confortável */
-  --text-muted: #64748b;      /* Slate claro para metadados (datas/locais) */
-  --border-color: #cbd5e1;    /* Cinza sutil para linhas divisórias */
+  --primary-color: #1e293b;
+  --accent-color: #2563eb;
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --border-color: #cbd5e1;
 }
 
 body {
   background-color: var(--bg-page);
   color: var(--text-main);
   font-family: "Inter", sans-serif;
-  line-height: 1.6;
-  padding: 40px 20px;
+  line-height: 1.5;
+  padding: 20px;
   margin: 0;
 }
 
@@ -24,157 +24,210 @@ header, main {
   max-width: 900px;
   margin: 0 auto;
   background-color: var(--bg-card);
-  padding: 40px 50px;
+  padding: 30px 40px;
 }
 
 header {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   border-radius: 8px 8px 0 0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 main {
-  padding-top: 10px;
+  padding-top: 5px;
   border-radius: 0 0 8px 8px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .line-header {
   background-color: var(--accent-color);
   width: 100%;
   height: 4px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .header-box h1 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--primary-color);
   letter-spacing: -0.5px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-transform: uppercase;
 }
 
 .address {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
-  font-weight: 400;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
 .contacts {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 15px;
-  font-size: 14px;
+  gap: 12px;
+  font-size: 13px;
   font-weight: 500;
-  color: var(--primary-color);
 }
 
 .contacts .line {
   background-color: var(--border-color);
   width: 1px;
-  height: 14px;
-  margin: 0;
+  height: 12px;
+}
+
+.contacts a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contacts a:hover {
+  color: var(--accent-color);
 }
 
 .line-main {
   background-color: var(--border-color);
   width: 100%;
   height: 1px;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
-/* Títulos de Seção (Histórico Profissional, Formação) */
+/* Divisão de duas colunas para otimizar espaço vertical */
+.resume-container {
+  display: flex;
+  gap: 30px;
+}
+
+.left-column {
+  flex: 1.6; /* Coluna do histórico profissional ganha mais destaque */
+}
+
+.right-column {
+  flex: 1;
+  border-left: 1px solid var(--border-color);
+  padding-left: 20px;
+}
+
 h2 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--primary-color);
-  letter-spacing: 0.5px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   border-left: 4px solid var(--accent-color);
-  padding-left: 12px;
+  padding-left: 10px;
   text-transform: uppercase;
 }
 
-/* Blocos de Experiência e Acadêmicos */
-.history-box-01, .cademic-box-01 {
-  margin-bottom: 30px;
+.history-box, .academic-box {
+  margin-bottom: 18px;
 }
 
-.history-box-01:last-of-type, .cademic-box-01:last-of-type {
-  margin-bottom: 0;
-}
-
-/* Cargos e Cursos */
 h3 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--accent-color);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   text-transform: uppercase;
 }
 
-/* Metadados (Empresa, Local, Período) */
-.history-note, .cademic-note {
+.history-note {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
+  justify-content: space-between;
+  font-size: 12px;
   color: var(--text-muted);
-  margin-bottom: 12px;
-  font-weight: 400;
+  margin-bottom: 6px;
+  font-weight: 500;
 }
 
-.history-note .line, .cademic-note .line {
-  background-color: var(--border-color);
-  width: 1px;
-  height: 12px;
-  margin: 0;
-}
-
-/* Texto de Instituição e Status Acadêmicos */
 .institution {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--primary-color);
-  margin-bottom: 4px;
 }
 
-.status {
+.academic-box .period {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.skills-summary p {
   font-size: 13px;
-  margin-top: 6px;
+  margin-bottom: 8px;
 }
 
-/* Lista de Competências / Atividades */
-.history-competences ul {
+.competences {
   list-style-type: none;
   padding-left: 0;
 }
 
-.history-competences li {
-  font-size: 14px;
+.competences li {
+  font-size: 13px;
   position: relative;
-  padding-left: 20px;
-  margin-bottom: 10px;
+  padding-left: 15px;
+  margin-bottom: 4px;
   text-align: justify;
 }
 
-.history-competences li::before {
+.competences li::before {
   content: "•";
   color: var(--accent-color);
-  font-weight: bold;
-  font-size: 16px;
   position: absolute;
   left: 0;
-  top: -2px;
+  top: -1px;
 }
 
-footer {
-  max-width: 900px;
-  margin: 0 auto;
-  height: 20px;
-  background-color: var(--bg-card);
-  border-radius: 0 0 8px 8px;
+/* 🖨️ REGRAS CRUCIAIS DE IMPRESSÃO (Força a compressão em 1 página A4) */
+@media print {
+  @page {
+    size: A4;
+    margin: 8mm 10mm; /* Margens finas de segurança para impressão */
+  }
+  
+  body {
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header, main {
+    max-width: 100%;
+    padding: 0;
+    box-shadow: none;
+    background-color: #ffffff;
+  }
+  
+  .line-main {
+    margin: 12px 0;
+  }
+  
+  .resume-container {
+    gap: 20px;
+  }
+  
+  .right-column {
+    padding-left: 15px;
+  }
+  
+  h2 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .history-box, .academic-box {
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 11.5px;
+  }
+  
+  .competences li, .skills-summary p {
+    font-size: 11px;
+  }
+  
+  footer {
+    display: none;
+  }
 }
